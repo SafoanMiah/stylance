@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
-    <>
+    <div className='min-h-screen'>
       <div>
         <Navbar />
       </div>
@@ -16,6 +16,6 @@ export default function App() {
       <div>
         <BrowseStyles />
       </div>
-    </>
+    </div>
   )
 }
