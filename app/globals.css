@@ -1,27 +1,99 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+/* Custom styles */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-family-sans: 'Roboto', sans-serif;
+  color-scheme: light;
+  background-color:#f5e3c8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+.custom-button {
+  transition: background 0.5s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  display: inline-flex;
+  height: 3rem; /* Base height */
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem; /* Rounded-md */
+  background: linear-gradient(to right, #ecd2a7, #b19b7c, #b19b7c);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  padding: 0 1.5rem; /* px-6 */
+  font-weight: 700; /* Font-medium */
+  color: #503c2e; /* Text-gray-950 */
+  font-size: 1rem; /* Base font size */
+  cursor: pointer;
+}
+.custom-button:hover {
+  background-position: 100% 200%;
+}
+.custom-button:focus {
+  outline: none;
+  ring: 2px solid #9CA3AF; /* Focus:ring-gray-400 */
+  ring-offset: 2px; /* Focus:ring-offset-2 */
+  ring-offset-color: #F9FAFB; /* Focus:ring-offset-gray-50 */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .custom-button {
+    height: 2.5rem; /* Smaller height for tablets */
+    font-size: 0.875rem; /* Smaller font size for tablets */
+    padding: 0 1rem; /* Reduced padding for tablets */
+    width: 50%; /* Adjust width for tablets */
+  }
+}
+@media (max-width: 480px) {
+  .custom-button {
+    height: 2rem; /* Smaller height for mobile */
+    font-size: 0.75rem; /* Smaller font size for mobile */
+    padding: 0 0.75rem; /* Further reduced padding for mobile */
+    width: 50%; /* Adjust width for mobile */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+
+.custom-effect {
+  background: linear-gradient(to right, #ffeccd, #e2cdaf, #bfac94);
+  background-size: 500% 500%;
+  background-position: 0% 0%;
+  font-weight: 700; /* Font-medium */
+  color: #503c2e; /* Text-gray-950 */
+  font-size: 1rem; /* Base font size */
+  cursor: pointer;
+  transition: background 2s; /* Slower transition */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.custom-effect:hover {
+  background-position: 100% 500%;
+}
+
+
+
+.text-container {
+  height: auto; /* Allows the container to grow with content */
+  padding: 10px; /* Adds space around the text */
+}
+.gradient-text {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#d7b185, #e1c197);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px #535353);
+  font-weight: 700;
 }
