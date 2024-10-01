@@ -83,13 +83,11 @@
   background-position: 100% 500%;
 }
 
-
-
 .text-container {
   height: auto; /* Allows the container to grow with content */
   padding: 10px; /* Adds space around the text */
 }
-.gradient-text {
+.gradient-title {
   font-size: 72px;
   background: -webkit-linear-gradient(#d7b185, #e1c197);
   -webkit-background-clip: text;
@@ -97,6 +95,7 @@
   filter: drop-shadow(2px 2px #535353);
   font-weight: 700;
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
